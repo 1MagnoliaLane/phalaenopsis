@@ -14,8 +14,8 @@ html,body{height:100%;margin:0;background:url(data:image/jpeg;base64,/9j/4AAQSkZ
 .page{background:#fff;border-radius:0 4px 4px 0;overflow:hidden;box-shadow:inset 18px 0 30px rgba(0,0,0,.18),inset 2px 0 8px rgba(255,255,255,.15)}
 .page img{width:100%;height:100%;object-fit:cover;display:block}
 /* Side nav arrows */
-.side-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:54px;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.1);color:#e8e3da;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:all .2s;font-size:18px;border-radius:2px}
-.side-arrow:hover{background:rgba(201,169,110,.75);border-color:#c9a96e;color:#1a1a1a}
+.side-arrow{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#000;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;transition:opacity .2s;font-size:22px;font-weight:bold;padding:8px;opacity:.6}
+.side-arrow:hover{opacity:1}
 #side-prev{left:clamp(6px,1.5vw,18px)}
 #side-next{right:clamp(6px,1.5vw,18px)}
 /* Branding pinned to corners */
@@ -28,7 +28,7 @@ html,body{height:100%;margin:0;background:url(data:image/jpeg;base64,/9j/4AAQSkZ
 <body>
 <div id="app">
 <div id="flipbook-container">
-<button class="side-arrow" id="side-prev" onclick="flip.flipPrev()" title="Previous page" aria-label="Previous page">&#9664;</button>
+<button class="side-arrow" id="side-prev" onclick="flip.flipPrev()" title="Previous page" aria-label="Previous page">&lt;</button>
 <div id="flipbook-scaler">
 <div id="flipbook-shadow">
 <div id="flipbook">
@@ -47,7 +47,7 @@ html,body{height:100%;margin:0;background:url(data:image/jpeg;base64,/9j/4AAQSkZ
 </div>
 </div>
 </div>
-<button class="side-arrow" id="side-next" onclick="flip.flipNext()" title="Next page" aria-label="Next page">&#9654;</button>
+<button class="side-arrow" id="side-next" onclick="flip.flipNext()" title="Next page" aria-label="Next page">&gt;</button>
 </div>
 </div>
 <span id="pageNum"></span>
